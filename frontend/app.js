@@ -1,4 +1,4 @@
-var host = "ws://khuyenn.com:8888";
+var host = "ws://yourserverhere:yourporthere";
 
 var myApp = angular.module('attackerApp',[]);
 
@@ -122,7 +122,7 @@ myApp.controller('tableController', ['$scope', 'websocketService', function($sco
             obj3[key] = Usernames[key];
             $scope.topUsernames.push(obj3);
         }
-        localStorage.setItem("attacks","aaaaaa");
+        
         $scope.topDestinations = $scope.topDestinations.sort(function(a, b){return -a[Object.keys(a)[0]] + b[Object.keys(b)[0]]}).slice(0,5);
         $scope.topSourceCountries = $scope.topSourceCountries.sort(function(a, b){return -a[Object.keys(a)[0]] + b[Object.keys(b)[0]]}).slice(0,5);
         $scope.topSourceIps = $scope.topSourceIps.sort(function(a, b){return -a[Object.keys(a)[0]] + b[Object.keys(b)[0]]}).slice(0,5);
