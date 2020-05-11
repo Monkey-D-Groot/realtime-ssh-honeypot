@@ -23,7 +23,7 @@ def get_top(db,key):
     return res
 
 async def hello(websocket, path):
-    data = r.lindex("input",0) # I have another process for renew data
+    data = r.lindex("input",0) # I have another process for renew data, collect realtime ssh connect
     if data is None:
         return
     data = data.decode("utf-8")
